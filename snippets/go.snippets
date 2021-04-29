@@ -1,5 +1,5 @@
 snippet v "shorthand variable declaration"
-	${1} := ${2}
+	${1} := ${0}
 
 snippet vr "variable initialization"
 	var ${1:t} ${0:string}
@@ -65,7 +65,7 @@ snippet inf "full interface "
 
 snippet if "if condition"
 	if ${1:/* condition */} {
-		${2:${VISUAL}}
+		${0:${VISUAL}}
 	}
 
 
@@ -119,15 +119,13 @@ snippet forr "for range loop"
 
 snippet fun "function"
 	func ${1:funcName}(${2}) ${3:error} {
-		${4}
+		${0}
 	}
-	${0}
 
 snippet fum "method"
 	func (${1:receiver} ${2:type}) ${3:funcName}(${4}) ${5:error} {
-		${6}
+		${0}
 	}
-	${0}
 
 snippet fumh "http handler function on receiver"
 	func (${1:receiver} ${2:type}) ${3:funcName}(${4:w} http.ResponseWriter, ${5:r} *http.Request) {
@@ -148,9 +146,8 @@ snippet mp "map"
 
 snippet main "func main()"
 	func main() {
-		${1}
+		${0}
 	}
-	${0}
 
 snippet nw "new"
 	new(${0:type})
